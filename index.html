@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <title>Best places to eat in Hongkong</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script>
+        function googleSuccess() {
+            if (!google) {
+                alert("Could not load data from Google Maps!")
+            } else {
+                ko.applyBindings(new ViewModel());
+            }
+        }
+    </script>
+    <script async src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places&callback=googleSuccess"></script>
+</head>
+
+<body>
+    <div class="site-wrapper">
+        <div class="main">
+            <div class="wrap">
+                <a href="#navigation" title="navigation menu" aria-label="navigation menu"> Navigation Menu <span class="bar bar-1"></span> 
+            <span class="bar bar-2"></span> <span class="bar bar-3"></span> </a>
+                <div class="LargeHeadline">Best places to eat in Hongkong</div>
+                <input placeholder="Search…" type="search" data-bind="value: query, valueUpdate: 'keyup'" autocomplete="off">
+            </div>
+            <div id="map-canvas"></div>
+        </div>
+        <nav id="navigation" role="navigation">
+            <ul data-bind="template: {foreach: markersVisible}">
+                <li>
+                    <a data-bind="text: title, click: listClick" href="#"></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <script src="JS/knockout-3.3.0.js"></script>
+    <script src="JS/jQuery.js"></script>
+    <script src="JS/navigation.js"></script>
+    <script src="JS/app.js"></script>
+</body>
+
+</html>
