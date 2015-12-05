@@ -1,6 +1,7 @@
 # General
 
-This is a one page app. </br>
+See the app here - http://dinagr.github.io/Neigborhood-Map/index.html </br>
+
 This app displays 5 resturants in Hong Kong marked on a map. </br>
 It is possible to click on every marker to get more information regarding this resturant. </br>
 There is a menu on the left side of the app. </br>
